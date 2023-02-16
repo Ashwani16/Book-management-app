@@ -22,10 +22,10 @@ useEffect(()=>{
 }
     dispatch(GetData(params))
 },[location.search])
-    return <SimpleGrid paddingTop='20px' columns={4} spacing={10}>
+    return <SimpleGrid paddingTop='20px' columns={[1,2,4]} spacing={10}>
 
         {books.length>0&&books.map((e)=>{
-            return <Container bg="grey.100" centerContent={true} key={e.id}>
+            return <Container bg="grey.100" _hover={{bg:"grey.200"}} centerContent={true} key={e.id}>
               <Link to={`/books/${e.id}`}>
                   <Image
                      borderRadius='8'
